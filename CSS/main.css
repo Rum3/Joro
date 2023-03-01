@@ -71,6 +71,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 10px;
+    font-size: 1.5rem;
 }
 .navbar .links ul .nav-links a {
     color: red;
@@ -380,7 +381,7 @@ nav .navbar-top {
 
 .links {
     position: relative;
-    display: inline-blo;
+    display: inline-block;
     margin: auto;
 }
 
@@ -396,10 +397,6 @@ ul .nav-links {
     padding: 15px;
 }
 
-.nav-links > a:visited,
-.navbar-top > a:visited {
-    color: #333333;
-}
 
 .link {
     text-align: center;
@@ -503,12 +500,12 @@ main {
     display: flex;
     flex-direction: column;
     margin-top: 10%;
+    font-size: 1.5rem;
 }
 
 .main-section {
     text-align: center;
 }
-
 
 
 .products {
@@ -526,8 +523,8 @@ main {
 .product-over {
     z-index: 10;
     position: absolute;
-    left: 0;
-    top: 0;
+    float: left;
+    max-width: 500px;
     width: 100%;
     height: 100%;
     display: none;
@@ -551,25 +548,14 @@ main {
     flex-direction: column;
 }
 
-.product-image {
-    position: absolute;
-    float: left;
-}
-
 .product-image img {
-    position: relative;
-    width: 400px;
-    height: 400px;
+    max-width: 500px;
     border-radius: 10%;
+    float: left;
+    width: 100%;
 }
 
 .product-summary {
-    position: relative;
-    float: right;
-    text-align: start;
-}
-.product-summary {
-    position: relative;
     float: right;
     text-align: start;
 }
@@ -724,6 +710,7 @@ main {
 .about {
     margin: 10%;
     text-align: center;
+    font-size: 1.5rem;
 } 
 
 footer {
@@ -815,17 +802,12 @@ footer {
         margin-top: 100px;
     }
 
-    .product-container {
-        width: 90%;
-    }
 
     .product-over button {
-        font-size: 0;
+        font-size: 0.9rem;
+        bottom: 30%;
     }
 
-    .product .product-image {
-        height: 200px;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -833,19 +815,6 @@ footer {
         font-size: 1rem;
     }
 
-    .product-summary {
-        height: 30%;
-    }
-
-    .products {
-        width: 80%;
-        margin: auto;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .product-summary > p {
-        display: none;
-    }
 
     .pop-mobiles-1 > figure {
         width: 70%;
@@ -918,10 +887,7 @@ footer {
         width: 55%;
         margin-left: 1%;
     }
-    .products {
-        min-width: 90%;
-        min-height: 16rem;
-    }
+
 
     .pop-mobiles-2 .products {
         grid-template-columns: 1fr;
@@ -945,3 +911,4 @@ footer {
         flex-direction: column;
     }
 }
+
